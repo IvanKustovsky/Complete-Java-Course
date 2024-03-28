@@ -2,13 +2,15 @@ package com.example.learnspringframework;
 
 import com.example.learnspringframework.game.GameRunner;
 import com.example.learnspringframework.game.MarioGame;
+import com.example.learnspringframework.game.PacmanGame;
 import com.example.learnspringframework.game.SuperContraGame;
 
 public class AppGamingBasicJava {
     public static void main(String[] args) {
-        //var marioGame = new MarioGame();
-        var superContraGame = new SuperContraGame();
-        var gameRunner = new GameRunner(superContraGame);
+        //var game = new MarioGame();
+        //var game = new SuperContraGame();
+        var game = new PacmanGame();
+        var gameRunner = new GameRunner(game);
         gameRunner.run();
     }
 }

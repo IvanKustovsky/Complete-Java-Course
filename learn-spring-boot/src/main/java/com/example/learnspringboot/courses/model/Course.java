@@ -1,10 +1,20 @@
 package com.example.learnspringboot.courses.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+    @Id
+    @GeneratedValue
     private long id;
+    // @Column(name = "course_name")
     private String name;
     private String author;
+
+    public Course(){}
 
     public Course(long id, String name, String author) {
         this.id = id;
